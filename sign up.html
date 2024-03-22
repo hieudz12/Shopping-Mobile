@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="CSS/sign-in.css" />
+	<title>Đá Quý Shopping</title>
+</head>
+
+<body>
+
+	<div class="login-box">
+		<h2>Đăng Kí</h2>
+		<form name="frm">
+			<div class="user-box">
+				<input type="email" name="email" id="email" ng-model="email" required placeholder="email hoặc sdt">
+				<label>Email</label>
+				<small ng-show="frm.email.$invalid && frm.email.$dirty"
+					style="color: aliceblue; margin-top: -10px;">Email không chính xác</small>
+			</div>
+			<div class="user-box">
+				<input required type="text" ng-model="usename" name="usename" id="usename" required="">
+				<label>Tên đăng nhập</label>
+				<small ng-show="frm.usename.$invalid && frm.usename.$dirty" style="color: aliceblue; margin-top: -10px;">Chưa nhập tên đăng nhập</small>
+			  </div>
+			  <div class="user-box">
+				<input type="password" ng-model="password" name="password" id="password" required>
+				<label>mật khẩu</label>
+				<small ng-show="frm.password.$invalid && frm.password.$dirty" style="color: aliceblue; margin-top: -10px;">Chưa nhập tên mật khẩu</small>
+	
+			  </div>
+			<a href="">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				Xác nhận
+			</a>
+			<a href="#signin">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				Đăng Nhập
+			</a>
+		</form>
+	</div>
+
+
+
+</body>
+
+</html>

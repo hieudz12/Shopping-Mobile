@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div class="container" style="margin-top: 80px;">
+    <div class="row">
+      <div class="col-sm-3"> 
+        <input type="text" class="form-control" ng-model="search" name="search" placeholder="Tìm sản phẩm mà bạn thích">
+      </div>
+      <div  class="col-sm-9">
+        <button  ng-click="sortBy('name',false)" style="background-color: #a80f23;" type="button" class="btn btn-primary" id="liveToastBtn">Sắp xếp tên A-Z</button>
+        <button ng-click="sortBy('name', true)" style="background-color: #a80f23;" type="button" class="btn btn-primary" id="liveToastBtn">Sắp xếp tên Z-A</button>
+        <button  ng-click="sortBy('price', false)" style="background-color: #a80f23;" type="button" class="btn btn-primary" id="liveToastBtn">Sắp xếp thấp đến cao</button>
+        <button ng-click="sortBy('price', true)" style="background-color: #a80f23;" type="button" class="btn btn-primary" id="liveToastBtn">Sắp xếp cao đến thấp</button>
+      </div>
+    </div>
+    </div>
+
+    <div class="sale-content-product" ng-repeat="item in timKiem | orderBy: prop : reverseSort | filter: {name: search}" style="margin-top: 30px; margin-left: 37px; " >
+        <a href="">
+          <img src="{{item.img}}" alt="" />
+        </a>
+        <p>
+          {{item.name}}
+        </p>
+        <p>
+          <i class="bi bi-star-fill" style="color: rgb(248, 214, 22)"></i>
+          <i class="bi bi-star-fill" style="color: rgb(248, 214, 22)"></i>
+          <i class="bi bi-star-fill" style="color: rgb(248, 214, 22)"></i>
+        </p>
+        <p style="color: #a80f23">
+          {{item.price | currency:"đ"}}
+          <strike style="color: gray; margin-left: 10px">{{item.discount | currency: "đ"}}</strike>
+        </p>
+        <div class="overlayCart">
+          <a href="#details/{{item.id}}"><button class="buy-now-btn" >Mua Ngay</button></a>
+          <a href=""><button class="add-to-cart-btn">Thêm vào Giỏ hàng</button></a>
+        </div>
+      </div>
+      <div ng-include="'view/footer.html'"></div>
+
+</body>
+</html>

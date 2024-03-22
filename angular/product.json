@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "img": "Images/MK1.webp",
+        "name": "Nhẫn bạc đính đá Thạch Anh Vàng Citrine 8mm",
+        "price": 540000,
+        "discount": 790000
+    },
+    {
+        "id": 2,
+        "img": "Images/MK2.webp",
+        "name": "Vòng Ngọc Cẩm Thạch xanh sơn thủy 10mm",
+        "price": 990000,
+        "discount": 1999000
+    },
+    {
+        "id": 3,
+        "img": "Images/MK3.webp",
+        "name": "Vòng đá Diopside 10mm cao cấp chuẩn 6A",
+        "price": 540000,
+        "discount": 790000
+    },
+    {
+        "id": 4,
+        "img": "Images/MK4.webp",
+        "name": "Vòng Ngọc Cẩm Thạch xanh sơn thủy 10mm",
+        "price": 990000,
+        "discount": 1999000
+    }   
+  ]
